@@ -4,7 +4,7 @@ var secretNumber = 0,
 	numberOfGuesses = 0;
 
 function writeMessage(elementId, message, appendMessage) {
-	var elemToUpdate = document.getElementById(elementId);
+	let elemToUpdate = document.getElementById(elementId);
 	if (appendMessage) {
 		elemToUpdate.innerHTML = elemToUpdate.innerHTML + message;
 	} else {
@@ -23,9 +23,9 @@ function guessInRange(guess) {
 }
 
 function userGuessed() {
-	var userGuessed = document.getElementById('userGuess').value;
-	var statusArea = document.getElementById('statusArea');
-	var historyList = document.getElementById('historyList');
+	let userGuessed = document.getElementById('userGuess').value;
+	let statusArea = document.getElementById('statusArea');
+	let historyList = document.getElementById('historyList');
 	if (userGuessed.length == 0 || ! guessInRange(userGuessed)) {
 		// Nothing entered or our of range.
 		writeMessage('statusArea', '<p>Please enter a number 1-100 and press the Guess button.</p>');
